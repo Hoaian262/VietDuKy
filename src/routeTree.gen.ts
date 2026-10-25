@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CartRouteImport } from './routes/cart'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as OrderIdRouteImport } from './routes/order.$id'
+import { Route as PassportIndexRouteImport } from './routes/passport.index'
+import { Route as PassportCollectionRouteImport } from './routes/passport.collection'
+import { Route as PassportVerifyRouteImport } from './routes/passport.verify'
+import { Route as ProductSlugRouteImport } from './routes/product.$slug'
+import { Route as StoriesSlugRouteImport } from './routes/stories.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CartRoute = CartRouteImport.update({
+  id: '/cart',
+  path: '/cart',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreRoute = ExploreRouteImport.update({
+  id: '/explore',
+  path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrderIdRoute = OrderIdRouteImport.update({
+  id: '/order/$id',
+  path: '/order/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PassportIndexRoute = PassportIndexRouteImport.update({
+  id: '/passport/',
+  path: '/passport/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PassportCollectionRoute = PassportCollectionRouteImport.update({
+  id: '/passport/collection',
+  path: '/passport/collection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PassportVerifyRoute = PassportVerifyRouteImport.update({
+  id: '/passport/verify',
+  path: '/passport/verify',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductSlugRoute = ProductSlugRouteImport.update({
+  id: '/product/$slug',
+  path: '/product/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoriesSlugRoute = StoriesSlugRouteImport.update({
+  id: '/stories/$slug',
+  path: '/stories/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cart': typeof CartRoute
+  '/checkout': typeof CheckoutRoute
+  '/explore': typeof ExploreRoute
+  '/shop': typeof ShopRoute
+  '/order/$id': typeof OrderIdRoute
+  '/passport/collection': typeof PassportCollectionRoute
+  '/passport/verify': typeof PassportVerifyRoute
+  '/product/$slug': typeof ProductSlugRoute
+  '/stories/$slug': typeof StoriesSlugRoute
+  '/passport/': typeof PassportIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cart': typeof CartRoute
+  '/checkout': typeof CheckoutRoute
+  '/explore': typeof ExploreRoute
+  '/shop': typeof ShopRoute
+  '/order/$id': typeof OrderIdRoute
+  '/passport/collection': typeof PassportCollectionRoute
+  '/passport/verify': typeof PassportVerifyRoute
+  '/product/$slug': typeof ProductSlugRoute
+  '/stories/$slug': typeof StoriesSlugRoute
+  '/passport': typeof PassportIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cart': typeof CartRoute
+  '/checkout': typeof CheckoutRoute
+  '/explore': typeof ExploreRoute
+  '/shop': typeof ShopRoute
+  '/order/$id': typeof OrderIdRoute
+  '/passport/collection': typeof PassportCollectionRoute
+  '/passport/verify': typeof PassportVerifyRoute
+  '/product/$slug': typeof ProductSlugRoute
+  '/stories/$slug': typeof StoriesSlugRoute
+  '/passport/': typeof PassportIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/cart'
+    | '/checkout'
+    | '/explore'
+    | '/shop'
+    | '/order/$id'
+    | '/passport/collection'
+    | '/passport/verify'
+    | '/product/$slug'
+    | '/stories/$slug'
+    | '/passport/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/cart'
+    | '/checkout'
+    | '/explore'
+    | '/shop'
+    | '/order/$id'
+    | '/passport/collection'
+    | '/passport/verify'
+    | '/product/$slug'
+    | '/stories/$slug'
+    | '/passport'
+  id:
+    | '__root__'
+    | '/'
+    | '/cart'
+    | '/checkout'
+    | '/explore'
+    | '/shop'
+    | '/order/$id'
+    | '/passport/collection'
+    | '/passport/verify'
+    | '/product/$slug'
+    | '/stories/$slug'
+    | '/passport/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CartRoute: typeof CartRoute
+  CheckoutRoute: typeof CheckoutRoute
+  ExploreRoute: typeof ExploreRoute
+  ShopRoute: typeof ShopRoute
+  OrderIdRoute: typeof OrderIdRoute
+  PassportCollectionRoute: typeof PassportCollectionRoute
+  PassportVerifyRoute: typeof PassportVerifyRoute
+  ProductSlugRoute: typeof ProductSlugRoute
+  StoriesSlugRoute: typeof StoriesSlugRoute
+  PassportIndexRoute: typeof PassportIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cart': {
+      id: '/cart'
+      path: '/cart'
+      fullPath: '/cart'
+      preLoaderRoute: typeof CartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore': {
+      id: '/explore'
+      path: '/explore'
+      fullPath: '/explore'
+      preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/order/$id': {
+      id: '/order/$id'
+      path: '/order/$id'
+      fullPath: '/order/$id'
+      preLoaderRoute: typeof OrderIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/passport/': {
+      id: '/passport/'
+      path: '/passport'
+      fullPath: '/passport/'
+      preLoaderRoute: typeof PassportIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/passport/collection': {
+      id: '/passport/collection'
+      path: '/passport/collection'
+      fullPath: '/passport/collection'
+      preLoaderRoute: typeof PassportCollectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/passport/verify': {
+      id: '/passport/verify'
+      path: '/passport/verify'
+      fullPath: '/passport/verify'
+      preLoaderRoute: typeof PassportVerifyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product/$slug': {
+      id: '/product/$slug'
+      path: '/product/$slug'
+      fullPath: '/product/$slug'
+      preLoaderRoute: typeof ProductSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stories/$slug': {
+      id: '/stories/$slug'
+      path: '/stories/$slug'
+      fullPath: '/stories/$slug'
+      preLoaderRoute: typeof StoriesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CartRoute: CartRoute,
+  CheckoutRoute: CheckoutRoute,
+  ExploreRoute: ExploreRoute,
+  ShopRoute: ShopRoute,
+  OrderIdRoute: OrderIdRoute,
+  PassportCollectionRoute: PassportCollectionRoute,
+  PassportVerifyRoute: PassportVerifyRoute,
+  ProductSlugRoute: ProductSlugRoute,
+  StoriesSlugRoute: StoriesSlugRoute,
+  PassportIndexRoute: PassportIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
