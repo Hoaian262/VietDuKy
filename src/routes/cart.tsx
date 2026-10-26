@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { FREE_SHIP_THRESHOLD } from "@/lib/data";
 import { vnd } from "@/lib/format";
-import { cartStore, setCartQty, shippingFor, useCart, useProducts } from "@/lib/store";
+import { cartStore, setCartQty } from "@/lib/store";
+import { Row, useCartLines } from "@/components/site/cart-utils";
 import { Button } from "@/components/ui/button";
 import { PageTitle } from "@/components/site/ProductCard";
 
@@ -10,15 +11,6 @@ export const Route = createFileRoute("/cart")({
   head: () => ({ meta: [{ title: "Giỏ hàng – Việt Du Ký" }, { name: "description", content: "Xem và chỉnh sửa giỏ hàng của bạn." }, { property: "og:title", content: "Giỏ hàng – Việt Du Ký" }, { property: "og:description", content: "Giỏ hàng Việt Du Ký." }] }),
   component: CartPage,
 });
-
-export function useCartLines() {
-  const cart = useCart();
-  const products = useProducts();
-  const lines = cart.map((c, i) => ({ ...c, index: i, product: products.find((p) => p.id === c.productId) })).filter((l) => l.product);
-  const subtotal = lines.reduce((s, l) => s + l.product!.price * l.qty, 0);
-  const shipping = shippingFor(subtotal);
-  return { lines, subtotal, shipping, total: subtotal + shipping };
-}
 
 function CartPage() {
   const { lines, subtotal, shipping, total } = useCartLines();
@@ -68,6 +60,3 @@ function CartPage() {
   );
 }
 
-export function Row({ k, v, bold }: { k: string; v: string; bold?: boolean }) {
-  return <div className={`flex justify-between text-sm ${bold ? "text-base font-semibold" : ""}`}><span className={bold ? "" : "text-muted-foreground"}>{k}</span><span>{v}</span></div>;
-}
