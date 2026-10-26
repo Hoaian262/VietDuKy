@@ -5,7 +5,7 @@ import { formatDate, vnd } from "@/lib/format";
 import { orderStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
 import { DemoNote } from "@/components/site/ProductCard";
-import { Row } from "./cart";
+import { Row } from "@/components/site/cart-utils";
 
 export const Route = createFileRoute("/order/$id")({
   head: () => ({ meta: [{ title: "Xác nhận đơn hàng – Việt Du Ký" }, { name: "description", content: "Chi tiết đơn hàng demo." }, { property: "og:title", content: "Xác nhận đơn hàng – Việt Du Ký" }, { property: "og:description", content: "Đơn hàng demo Việt Du Ký." }, { name: "robots", content: "noindex" }] }),

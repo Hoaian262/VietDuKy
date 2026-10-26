@@ -5,7 +5,7 @@ import { vnd } from "@/lib/format";
 import { placeDemoOrder, userStore } from "@/lib/store";
 import { Button } from "@/components/ui/button";
 import { DemoNote, PageTitle } from "@/components/site/ProductCard";
-import { Row, useCartLines } from "./cart";
+import { Row, useCartLines } from "@/components/site/cart-utils";
 
 export const Route = createFileRoute("/checkout")({
   head: () => ({ meta: [{ title: "Thanh toán (demo) – Việt Du Ký" }, { name: "description", content: "Thông tin giao hàng và phương thức thanh toán demo." }, { property: "og:title", content: "Thanh toán – Việt Du Ký" }, { property: "og:description", content: "Thanh toán demo Việt Du Ký." }] }),
