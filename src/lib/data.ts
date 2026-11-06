@@ -25,17 +25,17 @@ export interface Product {
   collectionId: string;
   region: Region;
   price: number;
-  originalPrice?: number;
+  originalPrice?: number | undefined;
   stock: number;
   image: string;
   gallery: string[];
   description: string;
   specs: Record<string, string>;
-  variants?: string[];
+  variants?: string[] | undefined;
   nfc: boolean;
   featured: boolean;
   createdAt: string;
-  storySlug?: string;
+  storySlug?: string | undefined;
 }
 
 export interface Story {
@@ -184,7 +184,7 @@ export const sampleUnlocked: Record<string, string> = {
   "VDK-NAM-0001": "2026-10-03",
 };
 
-export interface OrderItem { productId: string; name: string; price: number; qty: number; variant?: string; image: string }
+export interface OrderItem { productId: string; name: string; price: number; qty: number; variant?: string | undefined; image: string }
 export type OrderStatus = "pending" | "confirmed" | "shipping" | "delivered" | "cancelled";
 export const ORDER_STATUS: Record<OrderStatus, string> = {
   pending: "Chờ xác nhận", confirmed: "Đã xác nhận", shipping: "Đang giao", delivered: "Đã giao", cancelled: "Đã hủy",
@@ -192,7 +192,7 @@ export const ORDER_STATUS: Record<OrderStatus, string> = {
 export interface Order {
   id: string;
   createdAt: string;
-  customer: { name: string; phone: string; email: string; address: string; city: string; district: string; ward: string; note?: string };
+  customer: { name: string; phone: string; email: string; address: string; city: string; district: string; ward: string; note?: string | undefined };
   items: OrderItem[];
   subtotal: number;
   shipping: number;
@@ -202,12 +202,13 @@ export interface Order {
   demo: true;
 }
 
+const P = (i: number) => products[i]!;
 const sc = (n: string) => ({ name: n, phone: "09xx xxx xxx", email: "mau@vidu.vn", address: "Địa chỉ mẫu", city: "TP. Hồ Chí Minh", district: "Quận mẫu", ward: "Phường mẫu" });
 export const sampleOrders: Order[] = [
-  { id: "VDK-DEMO-1001", createdAt: "2026-10-02", customer: sc("Khách mẫu A"), items: [{ productId: "p1", name: products[0].name, price: 450000, qty: 1, image: motcot }], subtotal: 450000, shipping: 30000, total: 480000, payment: "cod", status: "delivered", demo: true },
-  { id: "VDK-DEMO-1002", createdAt: "2026-10-09", customer: sc("Khách mẫu B"), items: [{ productId: "p5", name: products[4].name, price: 360000, qty: 2, image: mekong }], subtotal: 720000, shipping: 0, total: 720000, payment: "bank", status: "shipping", demo: true },
-  { id: "VDK-DEMO-1003", createdAt: "2026-10-16", customer: sc("Khách mẫu C"), items: [{ productId: "p3", name: products[2].name, price: 390000, qty: 1, image: hoian }, { productId: "p7", name: products[6].name, price: 250000, qty: 3, image: hoian }], subtotal: 1140000, shipping: 0, total: 1140000, payment: "cod", status: "confirmed", demo: true },
-  { id: "VDK-DEMO-1004", createdAt: "2026-10-22", customer: sc("Khách mẫu D"), items: [{ productId: "p6", name: products[5].name, price: 420000, qty: 1, image: saigon }], subtotal: 420000, shipping: 30000, total: 450000, payment: "cod", status: "pending", demo: true },
+  { id: "VDK-DEMO-1001", createdAt: "2026-10-02", customer: sc("Khách mẫu A"), items: [{ productId: "p1", name: P(0).name, price: 450000, qty: 1, image: motcot }], subtotal: 450000, shipping: 30000, total: 480000, payment: "cod", status: "delivered", demo: true },
+  { id: "VDK-DEMO-1002", createdAt: "2026-10-09", customer: sc("Khách mẫu B"), items: [{ productId: "p5", name: P(4).name, price: 360000, qty: 2, image: mekong }], subtotal: 720000, shipping: 0, total: 720000, payment: "bank", status: "shipping", demo: true },
+  { id: "VDK-DEMO-1003", createdAt: "2026-10-16", customer: sc("Khách mẫu C"), items: [{ productId: "p3", name: P(2).name, price: 390000, qty: 1, image: hoian }, { productId: "p7", name: P(6).name, price: 250000, qty: 3, image: hoian }], subtotal: 1140000, shipping: 0, total: 1140000, payment: "cod", status: "confirmed", demo: true },
+  { id: "VDK-DEMO-1004", createdAt: "2026-10-22", customer: sc("Khách mẫu D"), items: [{ productId: "p6", name: P(5).name, price: 420000, qty: 1, image: saigon }], subtotal: 420000, shipping: 30000, total: 450000, payment: "cod", status: "pending", demo: true },
 ];
 
 export const FREE_SHIP_THRESHOLD = 500000;

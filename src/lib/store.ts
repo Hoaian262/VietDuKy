@@ -30,7 +30,7 @@ function createStore<T>(key: string, initial: T) {
   return { get, set, use };
 }
 
-export interface CartItem { productId: string; qty: number; variant?: string }
+export interface CartItem { productId: string; qty: number; variant?: string | undefined }
 export interface DemoUser { name: string; email: string; phone?: string }
 
 export const cartStore = createStore<CartItem[]>("vdk-cart", []);

@@ -44,7 +44,7 @@ function ProductPage() {
 
   const add = () => {
     const added = addToCart(p.id, qty, v);
-    if (added === 0) return toast.error("Số lượng trong giỏ đã đạt mức tồn kho hiện có.");
+    if (added === 0) { toast.error("Số lượng trong giỏ đã đạt mức tồn kho hiện có."); return; }
     toast.success(`Đã thêm ${added} × "${p.name}" vào giỏ hàng`, { action: { label: "Xem giỏ", onClick: () => (window.location.href = "/cart") } });
     setQty(1);
   };
