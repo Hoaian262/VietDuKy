@@ -115,7 +115,8 @@ export const products: Product[] = [
   },
   {
     id: "p7", slug: "blind-box-ba-mien", name: "Blind Box Ba Miền (hộp ngẫu nhiên)", collectionId: "thang-long", region: "bac",
-    price: 250000, stock: 50, image: hoian, gallery: [hoian, motcot, mekong],
+    price: 250000, stock: 50, image: hoian, gallery: [hoian,
+       mekong],
     description: "Hộp bí ẩn chứa ngẫu nhiên 1 trong 6 nhân vật mini thuộc ba miền. Mỗi hộp có thẻ NFC riêng.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "Mini 6 cm", "Phiên bản": "Ngẫu nhiên", "NFC": "Thẻ NFC trong hộp" },
     nfc: true, featured: false, createdAt: "2026-10-20",
@@ -166,7 +167,7 @@ export const products: Product[] = [
 
 export const stories: Story[] = [
   {
-    slug: "doa-sen-giua-thang-long", title: "Đóa sen giữa Thăng Long", region: "bac", image: motcot,
+    slug: "doa-sen-giua-thang-long", title: "Đóa sen giữa Thăng Long", region: "bac", image:halong,
     intro: "Ngôi chùa nhỏ dựng trên một cột đá, gợi hình bông sen vươn lên từ mặt hồ.",
     background: [
       "Chùa Một Cột là một trong những công trình biểu tượng của Hà Nội, thường được nhắc đến với hình dáng như đóa sen nở trên mặt nước.",
@@ -255,7 +256,7 @@ export interface Order {
 const P = (i: number) => products[i]!;
 const sc = (n: string) => ({ name: n, phone: "09xx xxx xxx", email: "mau@vidu.vn", address: "Địa chỉ mẫu", city: "TP. Hồ Chí Minh", district: "Quận mẫu", ward: "Phường mẫu" });
 export const sampleOrders: Order[] = [
-  { id: "VDK-DEMO-1001", createdAt: "2026-10-02", customer: sc("Khách mẫu A"), items: [{ productId: "p1", name: P(0).name, price: 450000, qty: 1, image: motcot }], subtotal: 450000, shipping: 30000, total: 480000, payment: "cod", status: "delivered", demo: true },
+  { id: "VDK-DEMO-1001", createdAt: "2026-10-02", customer: sc("Khách mẫu A"), items: [{ productId: "p1", name: P(0).name, price: 450000, qty: 1, image: halong }], subtotal: 450000, shipping: 30000, total: 480000, payment: "cod", status: "delivered", demo: true },
   { id: "VDK-DEMO-1002", createdAt: "2026-10-09", customer: sc("Khách mẫu B"), items: [{ productId: "p5", name: P(4).name, price: 360000, qty: 2, image: mekong }], subtotal: 720000, shipping: 0, total: 720000, payment: "bank", status: "shipping", demo: true },
   { id: "VDK-DEMO-1003", createdAt: "2026-10-16", customer: sc("Khách mẫu C"), items: [{ productId: "p3", name: P(2).name, price: 390000, qty: 1, image: hoian }, { productId: "p7", name: P(6).name, price: 250000, qty: 3, image: hoian }], subtotal: 1140000, shipping: 0, total: 1140000, payment: "cod", status: "confirmed", demo: true },
   { id: "VDK-DEMO-1004", createdAt: "2026-10-22", customer: sc("Khách mẫu D"), items: [{ productId: "p6", name: P(5).name, price: 420000, qty: 1, image: saigon }], subtotal: 420000, shipping: 30000, total: 450000, payment: "cod", status: "pending", demo: true },
