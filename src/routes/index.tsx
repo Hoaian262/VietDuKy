@@ -30,7 +30,7 @@ function Home() {
         <div className="container-page grid items-center gap-10 py-14 md:grid-cols-2 md:py-20">
           <div className="fade-up">
             <p className="eyebrow text-gold">Art toy · Blind box · Phygital</p>
-            <h1 className="mt-4 text-5xl leading-[1.05] md:text-6xl lg:text-7xl">Gom hồn Việt<br /><em className="text-gold">vào từng món nhỏ</em> lưu dấu nghìn câu chuyện.</h1>
+            <h1 className="mt-4 text-5xl leading-[1.05] md:text-4xl lg:text-5xl">Gom hồn Việt<br /><em className="text-gold">vào từng món nhỏ</em> lưu dấu nghìn câu chuyện.</h1>
             <p className="mt-6 max-w-md text-lg text-ink-foreground/75">Mỗi món đồ sưu tầm là một hành trình khám phá những vùng đất, di sản và câu chuyện Việt Nam.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild variant="hero" size="lg"><Link to="/shop">Khám phá bộ sưu tập <ArrowRight /></Link></Button>
