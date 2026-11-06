@@ -8,7 +8,7 @@ import saigon from "@/assets/p-saigon.jpg";
 import halong from "@/assets/p-halong.jpg";
 
 export type Region = "bac" | "trung" | "nam";
-export const REGIONS: Record<Region, string> = { bac: "Miền Bắc", trung: "Miền Trung", nam: "Miền Nam" };
+export const REGIONS: Record<Region, string> = { bac: "Ba Miền", trung: "Miền Trung", nam: "Miền Nam" };
 
 export interface Collection {
   id: string;
