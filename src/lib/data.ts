@@ -63,7 +63,7 @@ export interface DigitalCollectible {
 }
 
 export const collections: Collection[] = [
-  { id: "thang-long", name: "Thăng Long Ký Ức", region: "bac", image: motcot, description: "Kiến trúc nghìn năm và vịnh biển kỳ vĩ của đất Bắc." },
+  { id: "thang-long", name: "Thăng Long Ký Ức", region: "bac", image: hoguom, description: "Kiến trúc nghìn năm và vịnh biển kỳ vĩ của đất Bắc." },
   { id: "co-do", name: "Cố Đô & Phố Hội", region: "trung", image: hoian, description: "Đèn lồng phố cổ và nét trang nghiêm chốn cung đình." },
   { id: "phuong-nam", name: "Sắc Màu Phương Nam", region: "nam", image: mekong, description: "Chợ nổi, sông nước và nhịp sống Sài Gòn rộn rã." },
 ];
