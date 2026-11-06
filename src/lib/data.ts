@@ -13,8 +13,8 @@ import caurong from "@/assets/u-caurong.jpg";
 import myson from "@/assets/u-myson.jpg";
 import camau from "@/assets/u-camau.jpg";
 
-export type Region = "bac" | "trung" | "nam";
-export const REGIONS: Record<Region, string> = { bac: "Ba Miền", trung: "Miền Trung", nam: "Miền Nam" };
+export type Region = "bac" | "trung" | "nam" | "bamien";
+export const REGIONS: Record<Region, string> = { bac: "Miền Bắc", trung: "Miền Trung", nam: "Miền Nam", bamien: "Ba Miền"  };
 
 export interface Collection {
   id: string;
@@ -70,30 +70,30 @@ export const collections: Collection[] = [
 
 export const products: Product[] = [
   {
-    id: "p1", slug: "chua-mot-cot-tieu-tinh", name: "Chùa Một Cột – Tiểu Tịnh", collectionId: "thang-long", region: "bac",
-    price: 450000, originalPrice: 520000, stock: 14, image: motcot, gallery: [motcot, halong],
-    description: "Mô hình art toy lấy cảm hứng từ ngôi chùa hình đóa sen giữa lòng Hà Nội, đi kèm nhân vật Tiểu Tịnh cầm hoa sen trắng.",
+    id: "p1", slug: "Limited - Edition", name: "BST - Đặc Biệt", collectionId: "Limited-edition", region: "bamien",
+    price: 450000, originalPrice: 450000, stock: 14, image: motcot, gallery: [motcot, halong],
+    description: "Khám phá những phiên bản blind box giới hạn với tạo hình độc quyền, mang đậm dấu ấn văn hóa Việt và giá trị sưu tầm dành cho những ai yêu thích sự khác biệt.",
     specs: { "Chất liệu": "Vinyl & nhựa resin", "Kích thước": "12 × 10 × 14 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     variants: ["Tiêu chuẩn", "Phiên bản đêm"], nfc: true, featured: true, createdAt: "2026-09-01", storySlug: "doa-sen-giua-thang-long",
   },
   {
-    id: "p2", slug: "ha-long-thuyen-buom", name: "BST Miền Bắc - Thăng Long ký ức", collectionId: "thang-long", region: "bac",
-    price: 520000, stock: 3, image: halong, gallery: [halong, sapa, hoguom],
-    description: "Chiếc thuyền buồm nâu nhỏ xinh lướt giữa những đảo đá vôi, gợi nhớ chuyến du ngoạn trên vịnh.",
+    id: "p2", slug: "BST-Mien-Bac", name: "BST - Thăng Long ký ức", collectionId: "thang-long", region: "bac",
+    price: 300000, stock: 14, image: halong, gallery: [halong, sapa, hoguom],
+    description: "Khám phá vẻ đẹp miền Bắc qua những tạo hình blind box lấy cảm hứng từ di sản, phong tục, trang phục và nét văn hóa đặc trưng của vùng đất nghìn năm văn hiến.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "14 × 9 × 13 cm", "Phiên bản": "Giới hạn", "NFC": "Có thẻ NFC gắn đế" },
-    nfc: true, featured: true, createdAt: "2026-10-05", storySlug: "canh-buom-tren-vinh",
+    nfc: true, featured: true, createdAt: "2026-10-05", storySlug: "BST-Mien_Bac",
   },
   {
-    id: "p3", slug: "hoi-an-co-be-den-long", name: "Hội An – Cô Bé Đèn Lồng", collectionId: "co-do", region: "trung",
-    price: 390000, stock: 22, image: hoian, gallery: [hoian, hue],
-    description: "Cô bé áo dài vàng mang theo chùm đèn lồng rực rỡ, đứng trước một ngôi nhà cổ tường vàng.",
+    id: "p3", slug: "BST-Mien-Trung", name: "BST - Cố Đô & Phố Hội", collectionId: "co-do", region: "trung",
+    price: 300000, stock: 22, image: hoian, gallery: [hoian, hue, caurong, myson],
+    description: "Khám phá vẻ đẹp miền Trung qua những tạo hình blind box lấy cảm hứng từ di sản cố đô, kiến trúc cổ, lễ hội và bản sắc văn hóa miền di sản.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "9 × 8 × 13 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     variants: ["Áo vàng", "Áo xanh ngọc"], nfc: true, featured: true, createdAt: "2026-08-20", storySlug: "anh-den-pho-hoi",
   },
   {
-    id: "p4", slug: "hue-cung-nu", name: "Huế – Cung Nữ Áo Tím", collectionId: "co-do", region: "trung",
-    price: 480000, originalPrice: 560000, stock: 0, image: hue, gallery: [hue, hoian],
-    description: "Nhân vật trong trang phục tím thêu họa tiết, đứng trước cổng thành mô phỏng phong cách cung đình.",
+    id: "p4", slug: "BST-Mien-Nam", name: "BST - Sắc Màu Phương Nam", collectionId: "phuong-nam", region: "nam",
+    price: 300000, stock: 0, image: hue, gallery: [saigon, camau, mekong],
+    description: "Khám phá sắc màu miền Nam qua những tạo hình blind box tái hiện nét văn hóa sông nước, chợ nổi, làng nghề và nhịp sống phóng khoáng của con người phương Nam.",
     specs: { "Chất liệu": "Vinyl & resin", "Kích thước": "11 × 9 × 14 cm", "Phiên bản": "Giới hạn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: true, createdAt: "2026-07-10", storySlug: "sac-tim-co-do",
   },
