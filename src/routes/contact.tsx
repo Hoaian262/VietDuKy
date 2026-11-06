@@ -26,7 +26,7 @@ function Contact() {
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     const r = z.object({ name: z.string().trim().min(2, "Vui lòng nhập họ tên."), email: z.string().email("Email chưa hợp lệ."), message: z.string().trim().min(10, "Nội dung cần ít nhất 10 ký tự.") }).safeParse(f);
-    if (!r.success) return setErr(r.error.issues[0].message);
+    if (!r.success) return setErr(r.error.issues[0]?.message ?? "Dữ liệu chưa hợp lệ.");
     setErr(""); setSent(true);
   };
   return (
@@ -51,7 +51,7 @@ function Contact() {
         <div>
           <h2 className="text-3xl">Câu hỏi thường gặp</h2>
           <Accordion type="single" collapsible className="mt-4">
-            {FAQ.map(([q, a]) => <AccordionItem key={q} value={q}><AccordionTrigger className="text-left">{q}</AccordionTrigger><AccordionContent>{a}</AccordionContent></AccordionItem>)}
+            {FAQ.map(([q, a]) => <AccordionItem key={q} value={q!}><AccordionTrigger className="text-left">{q}</AccordionTrigger><AccordionContent>{a}</AccordionContent></AccordionItem>)}
           </Accordion>
         </div>
       </div>

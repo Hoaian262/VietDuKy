@@ -69,7 +69,7 @@ function Overview() {
   );
 }
 
-const empty = (): Product => ({ id: `p${Date.now()}`, slug: "", name: "", collectionId: collections[0].id, region: "bac", price: 0, stock: 0, image: seed[0].image, gallery: [], description: "", specs: {}, nfc: true, featured: false, createdAt: new Date().toISOString().slice(0, 10) });
+const empty = (): Product => ({ id: `p${Date.now()}`, slug: "", name: "", collectionId: collections[0]!.id, region: "bac", price: 0, stock: 0, image: seed[0]!.image, gallery: [], description: "", specs: {}, nfc: true, featured: false, createdAt: new Date().toISOString().slice(0, 10) });
 
 function Products() {
   const products = useProducts();

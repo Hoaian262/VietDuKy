@@ -29,7 +29,7 @@ export function AuthForm({ mode }: { mode: "login" | "register" }) {
   };
   const input = (k: keyof typeof f, label: string, type = "text") => (
     <label className="block text-sm"><span className="font-medium">{label}</span>
-      <input type={type} value={f[k]} onChange={(e) => setF({ ...f, [k]: e.target.value })} aria-invalid={!!err[k]} className={`mt-1 h-11 w-full rounded-xl border bg-card px-4 ${err[k] ? "border-destructive" : "border-input"}`} />
+      <input type={type} value={f[k] ?? ""} onChange={(e) => setF({ ...f, [k]: e.target.value })} aria-invalid={!!err[k]} className={`mt-1 h-11 w-full rounded-xl border bg-card px-4 ${err[k] ? "border-destructive" : "border-input"}`} />
       {err[k] && <span className="mt-1 block text-xs text-destructive">{err[k]}</span>}
     </label>
   );
