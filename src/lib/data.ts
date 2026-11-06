@@ -77,8 +77,8 @@ export const products: Product[] = [
     variants: ["Tiêu chuẩn", "Phiên bản đêm"], nfc: true, featured: true, createdAt: "2026-09-01", storySlug: "doa-sen-giua-thang-long",
   },
   {
-    id: "p2", slug: "ha-long-thuyen-buom", name: "Hạ Long – Thuyền Buồm Nâu", collectionId: "thang-long", region: "bac",
-    price: 520000, stock: 3, image: halong, gallery: [halong, motcot],
+    id: "p2", slug: "ha-long-thuyen-buom", name: "BST Miền Bắc - Thăng Long ký ức", collectionId: "thang-long", region: "bac",
+    price: 520000, stock: 3, image: halong, gallery: [halong, sapa, hoguom],
     description: "Chiếc thuyền buồm nâu nhỏ xinh lướt giữa những đảo đá vôi, gợi nhớ chuyến du ngoạn trên vịnh.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "14 × 9 × 13 cm", "Phiên bản": "Giới hạn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: true, createdAt: "2026-10-05", storySlug: "canh-buom-tren-vinh",
