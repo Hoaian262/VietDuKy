@@ -24,7 +24,7 @@ export function AuthForm({ mode }: { mode: "login" | "register" }) {
     const r = schema.safeParse(f);
     if (!r.success) { const o: Record<string, string> = {}; r.error.issues.forEach((i) => (o[String(i.path[0])] ??= i.message)); return setErr(o); }
     // Demo only: password is never stored.
-    userStore.set({ name: f.name || f.email.split("@")[0], email: f.email });
+    userStore.set({ name: f.name || f.email.split("@")[0] || "Bạn", email: f.email });
     navigate({ to: "/account" });
   };
   const input = (k: keyof typeof f, label: string, type = "text") => (
