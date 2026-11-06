@@ -1,11 +1,17 @@
 // Demonstration data for the Việt Du Ký prototype. All products, prices,
 // stock and collectors are fictional sample data — not real inventory.
 import motcot from "@/assets/p-motcot.jpg";
-import hoian from "@/assets/p-hoian.jpg";
-import hue from "@/assets/p-hue.jpg";
-import mekong from "@/assets/p-mekong.jpg";
-import saigon from "@/assets/p-saigon.jpg";
-import halong from "@/assets/p-halong.jpg";
+import hoian from "@/assets/u-hoian2.jpg";
+import hue from "@/assets/u-hue2.jpg";
+import mekong from "@/assets/u-caitang.jpg";
+import saigon from "@/assets/u-benthanh.jpg";
+import halong from "@/assets/u-halong2.jpg";
+import hoguom from "@/assets/u-hoguom.jpg";
+import vanmieu from "@/assets/u-vanmieu.jpg";
+import sapa from "@/assets/u-sapa.jpg";
+import caurong from "@/assets/u-caurong.jpg";
+import myson from "@/assets/u-myson.jpg";
+import camau from "@/assets/u-camau.jpg";
 
 export type Region = "bac" | "trung" | "nam";
 export const REGIONS: Record<Region, string> = { bac: "Ba Miền", trung: "Miền Trung", nam: "Miền Nam" };
@@ -111,6 +117,48 @@ export const products: Product[] = [
     description: "Hộp bí ẩn chứa ngẫu nhiên 1 trong 6 nhân vật mini thuộc ba miền. Mỗi hộp có thẻ NFC riêng.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "Mini 6 cm", "Phiên bản": "Ngẫu nhiên", "NFC": "Thẻ NFC trong hộp" },
     nfc: true, featured: false, createdAt: "2026-10-20",
+  },
+  {
+    id: "p8", slug: "ho-guom-co-be-rua-vang", name: "Hồ Gươm – Cô Bé Rùa Vàng", collectionId: "thang-long", region: "bac",
+    price: 420000, stock: 15, image: hoguom, gallery: [hoguom],
+    description: "Cô bé nón lá áo dài đỏ ôm chú rùa nhỏ, phía sau là tháp giữa hồ và cành đào.",
+    specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
+    nfc: true, featured: false, createdAt: "2026-10-25",
+  },
+  {
+    id: "p9", slug: "van-mieu-cau-hoc-tro", name: "Văn Miếu – Cậu Học Trò", collectionId: "thang-long", region: "bac",
+    price: 420000, stock: 12, image: vanmieu, gallery: [vanmieu],
+    description: "Cậu học trò khăn xếp cầm cuốn sách, đứng trước cổng Văn Miếu cùng bia đá rùa.",
+    specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
+    nfc: true, featured: false, createdAt: "2026-10-25",
+  },
+  {
+    id: "p10", slug: "sa-pa-co-be-ruong-bac-thang", name: "Sa Pa – Cô Bé Ruộng Bậc Thang", collectionId: "thang-long", region: "bac",
+    price: 420000, stock: 10, image: sapa, gallery: [sapa],
+    description: "Cô bé trang phục thổ cẩm đeo gùi lúa giữa ruộng bậc thang mù sương.",
+    specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
+    nfc: true, featured: false, createdAt: "2026-10-25",
+  },
+  {
+    id: "p11", slug: "cau-rong-da-nang", name: "Đà Nẵng – Cậu Bé Cầu Rồng", collectionId: "co-do", region: "trung",
+    price: 420000, stock: 18, image: caurong, gallery: [caurong],
+    description: "Cậu bé áo xanh ôm chú rồng nhỏ, phía sau là cây cầu rồng vàng bên sông.",
+    specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
+    nfc: true, featured: false, createdAt: "2026-10-25",
+  },
+  {
+    id: "p12", slug: "my-son-vu-nu-thap-cham", name: "Mỹ Sơn – Vũ Nữ Tháp Chăm", collectionId: "co-do", region: "trung",
+    price: 450000, stock: 6, image: myson, gallery: [myson],
+    description: "Nhân vật đội mũ vàng trang phục cách điệu, đứng giữa quần thể tháp gạch cổ.",
+    specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
+    nfc: true, featured: false, createdAt: "2026-10-25",
+  },
+  {
+    id: "p13", slug: "mui-ca-mau-cuc-nam", name: "Mũi Cà Mau – Cô Bé Cực Nam", collectionId: "phuong-nam", region: "nam",
+    price: 420000, stock: 20, image: camau, gallery: [camau],
+    description: "Cô bé nón lá khăn rằn bên cột cờ và chiếc thuyền nhỏ nơi cực Nam Tổ quốc.",
+    specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
+    nfc: true, featured: false, createdAt: "2026-10-25",
   },
 ];
 
