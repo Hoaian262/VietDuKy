@@ -1,9 +1,9 @@
 // Demonstration data for the Việt Du Ký prototype. All products, prices,
 // stock and collectors are fictional sample data — not real inventory.
-import motcot from "@/assets/p-motcot.jpg";
+
 import hoian from "@/assets/u-hoian2.jpg";
 import hue from "@/assets/u-hue2.jpg";
-import mekong from "@/assets/u-caitang.jpg";
+import mekong from "@/assets/u-cairang.jpg";
 import saigon from "@/assets/u-benthanh.jpg";
 import halong from "@/assets/u-halong2.jpg";
 import hoguom from "@/assets/u-hoguom.jpg";
@@ -12,6 +12,8 @@ import sapa from "@/assets/u-sapa.jpg";
 import caurong from "@/assets/u-caurong.jpg";
 import myson from "@/assets/u-myson.jpg";
 import camau from "@/assets/u-camau.jpg";
+import hatboi from "@/assets/lit1.jpg";
+import tet from "@/assets/lit2.jpg";
 
 export type Region = "bac" | "trung" | "nam" | "bamien";
 export const REGIONS: Record<Region, string> = { bac: "Miền Bắc", trung: "Miền Trung", nam: "Miền Nam", bamien: "Ba Miền"  };
@@ -71,7 +73,7 @@ export const collections: Collection[] = [
 export const products: Product[] = [
   {
     id: "p1", slug: "Limited - Edition", name: "BST - Đặc Biệt", collectionId: "Limited-edition", region: "bamien",
-    price: 450000, originalPrice: 450000, stock: 14, image: motcot, gallery: [motcot, halong],
+    price: 450000, originalPrice: 450000, stock: 14, image: hatboi, gallery: [hatboi, tet],
     description: "Khám phá những phiên bản blind box giới hạn với tạo hình độc quyền, mang đậm dấu ấn văn hóa Việt và giá trị sưu tầm dành cho những ai yêu thích sự khác biệt.",
     specs: { "Chất liệu": "Vinyl & nhựa resin", "Kích thước": "12 × 10 × 14 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     variants: ["Tiêu chuẩn", "Phiên bản đêm"], nfc: true, featured: true, createdAt: "2026-09-01", storySlug: "doa-sen-giua-thang-long",
