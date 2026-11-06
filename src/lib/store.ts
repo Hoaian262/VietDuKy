@@ -34,7 +34,7 @@ export interface CartItem { productId: string; qty: number; variant?: string | u
 export interface DemoUser { name: string; email: string; phone?: string }
 
 export const cartStore = createStore<CartItem[]>("vdk-cart", []);
-export const productStore = createStore<Product[]>("vdk-products", seedProducts);
+export const productStore = createStore<Product[]>("vdk-products-v2", seedProducts);
 export const orderStore = createStore<Order[]>("vdk-orders", sampleOrders);
 export const userStore = createStore<DemoUser | null>("vdk-user", null);
 export const passportStore = createStore<Record<string, string>>("vdk-passport", sampleUnlocked);
