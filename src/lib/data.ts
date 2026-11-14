@@ -14,6 +14,8 @@ import myson from "@/assets/u-myson.jpg";
 import camau from "@/assets/u-camau.jpg";
 import hatboi from "@/assets/lit1.jpg";
 import tet from "@/assets/lit2.jpg";
+import hop from "@/assets/hop.png";
+import set from "@/assets/set.png";
 
 export type Region = "bac" | "trung" | "nam" | "bamien";
 export const REGIONS: Record<Region, string> = { bac: "Miền Bắc", trung: "Miền Trung", nam: "Miền Nam", bamien: "Ba Miền"  };
@@ -80,42 +82,42 @@ export const products: Product[] = [
   },
   {
     id: "p2", slug: "BST-Mien-Bac", name: "BST - Thăng Long ký ức", collectionId: "thang-long", region: "bac",
-    price: 300000, stock: 14, image: halong, gallery: [halong, sapa, hoguom],
+    price: 300000, stock: 14, image: halong, gallery: [set, hop, halong, sapa, hoguom],
     description: "Khám phá vẻ đẹp miền Bắc qua những tạo hình blind box lấy cảm hứng từ di sản, phong tục, trang phục và nét văn hóa đặc trưng của vùng đất nghìn năm văn hiến.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "14 × 9 × 13 cm", "Phiên bản": "Giới hạn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: true, createdAt: "2026-10-05", storySlug: "BST-Mien_Bac",
   },
   {
     id: "p3", slug: "BST-Mien-Trung", name: "BST - Cố Đô & Phố Hội", collectionId: "co-do", region: "trung",
-    price: 300000, stock: 22, image: hoian, gallery: [hoian, hue, caurong, myson],
+    price: 300000, stock: 22, image: hoian, gallery: [hop, set, hoian, hue, caurong, myson],
     description: "Khám phá vẻ đẹp miền Trung qua những tạo hình blind box lấy cảm hứng từ di sản cố đô, kiến trúc cổ, lễ hội và bản sắc văn hóa miền di sản.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "9 × 8 × 13 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     variants: ["Áo vàng", "Áo xanh ngọc"], nfc: true, featured: true, createdAt: "2026-08-20", storySlug: "anh-den-pho-hoi",
   },
   {
     id: "p4", slug: "BST-Mien-Nam", name: "BST - Sắc Màu Phương Nam", collectionId: "phuong-nam", region: "nam",
-    price: 300000, stock: 0, image: hue, gallery: [saigon, camau, mekong],
+    price: 300000, stock: 0, image: hue, gallery: [hop, set,saigon, camau, mekong],
     description: "Khám phá sắc màu miền Nam qua những tạo hình blind box tái hiện nét văn hóa sông nước, chợ nổi, làng nghề và nhịp sống phóng khoáng của con người phương Nam.",
     specs: { "Chất liệu": "Vinyl & resin", "Kích thước": "11 × 9 × 14 cm", "Phiên bản": "Giới hạn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: true, createdAt: "2026-07-10", storySlug: "sac-tim-co-do",
   },
   {
     id: "p5", slug: "cho-noi-mien-tay", name: "Chợ Nổi – Ghe Trái Cây", collectionId: "phuong-nam", region: "nam",
-    price: 360000, stock: 30, image: mekong, gallery: [mekong, saigon],
+    price: 300000, stock: 30, image: mekong, gallery: [mekong, saigon],
     description: "Cậu bé chèo ghe chở đầy trái cây miệt vườn, tái hiện không khí chợ nổi sông nước.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "13 × 9 × 11 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: true, createdAt: "2026-09-15", storySlug: "nhip-song-cho-noi",
   },
   {
     id: "p6", slug: "sai-gon-cho-ben-thanh", name: "Sài Gòn – Ly Cà Phê Sáng", collectionId: "phuong-nam", region: "nam",
-    price: 420000, originalPrice: 470000, stock: 8, image: saigon, gallery: [saigon, mekong],
+    price: 300000, originalPrice: 470000, stock: 8, image: saigon, gallery: [saigon, mekong],
     description: "Nhân vật nhỏ cầm ly cà phê sữa đá trước tòa tháp đồng hồ của khu chợ trung tâm.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "14 × 8 × 12 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: true, createdAt: "2026-10-12", storySlug: "sang-sai-gon",
   },
   {
     id: "p7", slug: "blind-box-ba-mien", name: "Blind Box Ba Miền (hộp ngẫu nhiên)", collectionId: "thang-long", region: "bac",
-    price: 250000, stock: 50, image: hoian, gallery: [hoian,
+    price: 300000, stock: 50, image: hoian, gallery: [hoian,
        mekong],
     description: "Hộp bí ẩn chứa ngẫu nhiên 1 trong 6 nhân vật mini thuộc ba miền. Mỗi hộp có thẻ NFC riêng.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "Mini 6 cm", "Phiên bản": "Ngẫu nhiên", "NFC": "Thẻ NFC trong hộp" },
@@ -123,42 +125,42 @@ export const products: Product[] = [
   },
   {
     id: "p8", slug: "ho-guom-co-be-rua-vang", name: "Hồ Gươm – Cô Bé Rùa Vàng", collectionId: "thang-long", region: "bac",
-    price: 420000, stock: 15, image: hoguom, gallery: [hoguom],
+    price: 300000, stock: 15, image: hoguom, gallery: [hoguom],
     description: "Cô bé nón lá áo dài đỏ ôm chú rùa nhỏ, phía sau là tháp giữa hồ và cành đào.",
     specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: false, createdAt: "2026-10-25",
   },
   {
     id: "p9", slug: "van-mieu-cau-hoc-tro", name: "Văn Miếu – Cậu Học Trò", collectionId: "thang-long", region: "bac",
-    price: 420000, stock: 12, image: vanmieu, gallery: [vanmieu],
+    price: 300000, stock: 12, image: vanmieu, gallery: [vanmieu],
     description: "Cậu học trò khăn xếp cầm cuốn sách, đứng trước cổng Văn Miếu cùng bia đá rùa.",
     specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: false, createdAt: "2026-10-25",
   },
   {
     id: "p10", slug: "sa-pa-co-be-ruong-bac-thang", name: "Sa Pa – Cô Bé Ruộng Bậc Thang", collectionId: "thang-long", region: "bac",
-    price: 420000, stock: 10, image: sapa, gallery: [sapa],
+    price: 300000, stock: 10, image: sapa, gallery: [sapa],
     description: "Cô bé trang phục thổ cẩm đeo gùi lúa giữa ruộng bậc thang mù sương.",
     specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: false, createdAt: "2026-10-25",
   },
   {
     id: "p11", slug: "cau-rong-da-nang", name: "Đà Nẵng – Cậu Bé Cầu Rồng", collectionId: "co-do", region: "trung",
-    price: 420000, stock: 18, image: caurong, gallery: [caurong],
+    price: 300000, stock: 18, image: caurong, gallery: [caurong],
     description: "Cậu bé áo xanh ôm chú rồng nhỏ, phía sau là cây cầu rồng vàng bên sông.",
     specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: false, createdAt: "2026-10-25",
   },
   {
     id: "p12", slug: "my-son-vu-nu-thap-cham", name: "Mỹ Sơn – Vũ Nữ Tháp Chăm", collectionId: "co-do", region: "trung",
-    price: 450000, stock: 6, image: myson, gallery: [myson],
+    price: 300000, stock: 6, image: myson, gallery: [myson],
     description: "Nhân vật đội mũ vàng trang phục cách điệu, đứng giữa quần thể tháp gạch cổ.",
     specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: false, createdAt: "2026-10-25",
   },
   {
     id: "p13", slug: "mui-ca-mau-cuc-nam", name: "Mũi Cà Mau – Cô Bé Cực Nam", collectionId: "phuong-nam", region: "nam",
-    price: 420000, stock: 20, image: camau, gallery: [camau],
+    price: 300000, stock: 20, image: camau, gallery: [camau],
     description: "Cô bé nón lá khăn rằn bên cột cờ và chiếc thuyền nhỏ nơi cực Nam Tổ quốc.",
     specs: { "Chất liệu": "Vinyl & acrylic", "Kích thước": "12 × 8 × 15 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: false, createdAt: "2026-10-25",
