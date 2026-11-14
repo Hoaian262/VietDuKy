@@ -67,7 +67,6 @@ function Home() {
       <section className="container-page pb-20">
         <p className="eyebrow">Nổi bật</p>
         <h2 className="mt-2 text-3xl md:text-4xl">Món đồ được yêu thích</h2>
-        <div className="mt-3"><DemoNote>Sản phẩm và giá dưới đây là dữ liệu minh họa cho bản prototype, không phải hàng tồn kho thật.</DemoNote></div>
         <div className="mt-8 grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-3">
           {featured.map((p) => <ProductCard key={p.id} product={p} />)}
         </div>
