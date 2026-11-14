@@ -96,7 +96,7 @@ export const products: Product[] = [
   },
   {
     id: "p4", slug: "BST-Mien-Nam", name: "BST - Sắc Màu Phương Nam", collectionId: "phuong-nam", region: "nam",
-    price: 300000, stock: 0, image: hue, gallery: [hop, set,saigon, camau, mekong],
+    price: 300000, stock: 0, image: hue, gallery: [hop, set, saigon, camau, mekong],
     description: "Khám phá sắc màu miền Nam qua những tạo hình blind box tái hiện nét văn hóa sông nước, chợ nổi, làng nghề và nhịp sống phóng khoáng của con người phương Nam.",
     specs: { "Chất liệu": "Vinyl & resin", "Kích thước": "11 × 9 × 14 cm", "Phiên bản": "Giới hạn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: true, createdAt: "2026-07-10", storySlug: "sac-tim-co-do",
