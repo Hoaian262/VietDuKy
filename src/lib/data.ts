@@ -14,6 +14,8 @@ import myson from "@/assets/u-myson.jpg";
 import camau from "@/assets/u-camau.jpg";
 import hatboi from "@/assets/lit1.jpg";
 import tet from "@/assets/lit2.jpg";
+import hop from "@/assets/hop.png";
+import set from "@/assets/set.png";
 
 export type Region = "bac" | "trung" | "nam" | "bamien";
 export const REGIONS: Record<Region, string> = { bac: "Miền Bắc", trung: "Miền Trung", nam: "Miền Nam", bamien: "Ba Miền"  };
@@ -80,21 +82,21 @@ export const products: Product[] = [
   },
   {
     id: "p2", slug: "BST-Mien-Bac", name: "BST - Thăng Long ký ức", collectionId: "thang-long", region: "bac",
-    price: 300000, stock: 14, image: halong, gallery: [halong, sapa, hoguom],
+    price: 300000, stock: 14, image: halong, gallery: [set, hop, halong, sapa, hoguom],
     description: "Khám phá vẻ đẹp miền Bắc qua những tạo hình blind box lấy cảm hứng từ di sản, phong tục, trang phục và nét văn hóa đặc trưng của vùng đất nghìn năm văn hiến.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "14 × 9 × 13 cm", "Phiên bản": "Giới hạn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: true, createdAt: "2026-10-05", storySlug: "BST-Mien_Bac",
   },
   {
     id: "p3", slug: "BST-Mien-Trung", name: "BST - Cố Đô & Phố Hội", collectionId: "co-do", region: "trung",
-    price: 300000, stock: 22, image: hoian, gallery: [hoian, hue, caurong, myson],
+    price: 300000, stock: 22, image: hoian, gallery: [hop, set, hoian, hue, caurong, myson],
     description: "Khám phá vẻ đẹp miền Trung qua những tạo hình blind box lấy cảm hứng từ di sản cố đô, kiến trúc cổ, lễ hội và bản sắc văn hóa miền di sản.",
     specs: { "Chất liệu": "Vinyl", "Kích thước": "9 × 8 × 13 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     variants: ["Áo vàng", "Áo xanh ngọc"], nfc: true, featured: true, createdAt: "2026-08-20", storySlug: "anh-den-pho-hoi",
   },
   {
     id: "p4", slug: "BST-Mien-Nam", name: "BST - Sắc Màu Phương Nam", collectionId: "phuong-nam", region: "nam",
-    price: 300000, stock: 0, image: hue, gallery: [saigon, camau, mekong],
+    price: 300000, stock: 0, image: hue, gallery: [hop, set, saigon, camau, mekong],
     description: "Khám phá sắc màu miền Nam qua những tạo hình blind box tái hiện nét văn hóa sông nước, chợ nổi, làng nghề và nhịp sống phóng khoáng của con người phương Nam.",
     specs: { "Chất liệu": "Vinyl & resin", "Kích thước": "11 × 9 × 14 cm", "Phiên bản": "Giới hạn", "NFC": "Có thẻ NFC gắn đế" },
     nfc: true, featured: true, createdAt: "2026-07-10", storySlug: "sac-tim-co-do",
