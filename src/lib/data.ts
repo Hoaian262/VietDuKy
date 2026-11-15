@@ -75,7 +75,7 @@ export const collections: Collection[] = [
 export const products: Product[] = [
   {
     id: "p1", slug: "Limited - Edition", name: "BST - Đặc Biệt", collectionId: "Limited-edition", region: "bamien",
-    price: 450000, stock: 14, image: hatboi, gallery: [hatboi, tet],
+    price: 350000, stock: 14, image: hatboi, gallery: [hatboi, tet],
     description: "Khám phá những phiên bản blind box giới hạn với tạo hình độc quyền, mang đậm dấu ấn văn hóa Việt và giá trị sưu tầm dành cho những ai yêu thích sự khác biệt.",
     specs: { "Chất liệu": "Vinyl & nhựa resin", "Kích thước": "12 × 10 × 14 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
     variants: ["Tiêu chuẩn"], nfc: true, featured: true, createdAt: "2026-09-01", storySlug: "doa-sen-giua-thang-long",
