@@ -78,7 +78,7 @@ export const products: Product[] = [
     price: 450000, stock: 14, image: hatboi, gallery: [hatboi, tet],
     description: "Khám phá những phiên bản blind box giới hạn với tạo hình độc quyền, mang đậm dấu ấn văn hóa Việt và giá trị sưu tầm dành cho những ai yêu thích sự khác biệt.",
     specs: { "Chất liệu": "Vinyl & nhựa resin", "Kích thước": "12 × 10 × 14 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
-    variants: ["Tiêu chuẩn", "Phiên bản đêm"], nfc: true, featured: true, createdAt: "2026-09-01", storySlug: "doa-sen-giua-thang-long",
+    variants: ["Tiêu chuẩn"], nfc: true, featured: true, createdAt: "2026-09-01", storySlug: "van-hoa-viet-hat-boi",
   },
   {
     id: "p2", slug: "BST-Mien-Bac", name: "BST - Thăng Long ký ức", collectionId: "thang-long", region: "bac",
