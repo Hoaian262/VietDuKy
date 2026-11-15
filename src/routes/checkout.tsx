@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { z } from "zod";
 import { vnd } from "@/lib/format";
 import { placeDemoOrder, userStore } from "@/lib/store";
@@ -30,8 +30,27 @@ function Checkout() {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [payment, setPayment] = useState<"cod" | "bank">("cod");
-  const [form, setForm] = useState<Form>({ name: user?.name ?? "", phone: user?.phone ?? "", email: user?.email ?? "", address: "", city: "", district: "", ward: "", note: "" });
+  const SAVED = "vdk-checkout";
+const [form, setForm] = useState<Form>({ name: user?.name ?? "", phone: user?.phone ?? "", email: user?.email ?? "", address: "", city: "", district: "", ward: "", note: "" });
+useEffect(() => {
+  try {
+    const saved = JSON.parse(localStorage.getItem(SAVED) ?? "{}");
+    setForm((f) => ({ ...f, ...saved }));
+  } catch {}
+}, []);
   const [errors, setErrors] = useState<Partial<Record<keyof Form, string>>>({});
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(SAVED);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (schema.safeParse(parsed).success) {
+          setForm(parsed);
+        }
+      }
+    } catch {}
+  }, []);
 
   if (lines.length === 0) return (
     <div className="container-page py-24 text-center"><h1 className="text-3xl">Chưa có sản phẩm để thanh toán</h1><Button asChild className="mt-6"><Link to="/shop">Về cửa hàng</Link></Button></div>
@@ -51,12 +70,13 @@ function Checkout() {
       customer: form, payment, subtotal, shipping, total,
       items: lines.map((l) => ({ productId: l.productId, name: l.product!.name, price: l.product!.price, qty: l.qty, variant: l.variant, image: l.product!.image })),
     });
+    try { localStorage.setItem(SAVED, JSON.stringify(form)); } catch {}
     navigate({ to: "/order/$id", params: { id: order.id } });
   };
   const field = (k: keyof Form, label: string, props: React.InputHTMLAttributes<HTMLInputElement> = {}) => (
     <label className="block text-sm">
       <span className="font-medium">{label}</span>
-      <input {...props} value={form[k] ?? ""} onChange={(e) => setForm({ ...form, [k]: e.target.value })} aria-invalid={!!errors[k]}
+      <input name={k} {...props} value={form[k] ?? ""} onChange={(e) => setForm({ ...form, [k]: e.target.value })} aria-invalid={!!errors[k]}
         className={`mt-1 h-11 w-full rounded-xl border bg-card px-4 ${errors[k] ? "border-destructive" : "border-input"}`} />
       {errors[k] && <span className="mt-1 block text-xs text-destructive">{errors[k]}</span>}
     </label>
@@ -81,9 +101,9 @@ function Checkout() {
               {field("phone", "Số điện thoại *", { inputMode: "tel", autoComplete: "tel" })}
               {field("email", "Email *", { type: "email", autoComplete: "email" })}
               <div className="md:col-span-2">{field("address", "Địa chỉ (số nhà, đường) *", { autoComplete: "street-address" })}</div>
-              {field("city", "Tỉnh/Thành phố *")}
-              {field("district", "Quận/Huyện *")}
-              {field("ward", "Phường/Xã *")}
+              {field("city", "Tỉnh/Thành phố *", { autoComplete: "address-level1" })}
+{field("district", "Quận/Huyện *", { autoComplete: "address-level2" })}
+{field("ward", "Phường/Xã *", { autoComplete: "address-level3" })}
               {field("note", "Ghi chú giao hàng")}
               <Button size="lg" variant="hero" className="md:col-span-2" onClick={next}>Tiếp tục</Button>
             </div>
