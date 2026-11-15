@@ -16,7 +16,7 @@ import hatboi from "@/assets/lit1.jpg";
 import tet from "@/assets/lit2.jpg";
 import hop from "@/assets/hop.png";
 import set from "@/assets/set.png";
-
+import art1 from "@/assets/art1.png";
 export type Region = "bac" | "trung" | "nam" | "bamien";
 export const REGIONS: Record<Region, string> = { bac: "Miền Bắc", trung: "Miền Trung", nam: "Miền Nam", bamien: "Ba Miền"  };
 
@@ -169,15 +169,17 @@ export const products: Product[] = [
 
 export const stories: Story[] = [
   {
-    slug: "doa-sen-giua-thang-long", title: "Đóa sen giữa Thăng Long", region: "bac", image:halong,
+    slug: "van-hoa-viet-hat-boi", title: "Hồn võ tướng", region: "trung", image:art1,
     intro: "Ngôi chùa nhỏ dựng trên một cột đá, gợi hình bông sen vươn lên từ mặt hồ.",
     background: [
-      "Chùa Một Cột là một trong những công trình biểu tượng của Hà Nội, thường được nhắc đến với hình dáng như đóa sen nở trên mặt nước.",
-      "Theo nhiều tài liệu phổ biến, ngôi chùa gắn với thời Lý và đã trải qua nhiều lần trùng tu. Phần mô tả ở đây chỉ mang tính giới thiệu, bạn nên tham khảo thêm nguồn sử liệu chính thống.",
+      "Hát bội (còn gọi là tuồng) là loại hình nghệ thuật sân khấu truyền thống lâu đời của Việt Nam, nổi bật với lối diễn ước lệ, động tác hình thể cách điệu và nghệ thuật hóa trang đặc trưng.",
+    "Trong đó, hình tượng tướng quân thường xuất hiện với bộ giáp lộng lẫy, cờ mão uy nghi và gương mặt được vẽ theo những quy ước riêng, thể hiện tính cách, khí chất của nhân vật. Mỗi màu sắc và đường nét trên khuôn mặt đều góp phần kể nên câu chuyện về lòng trung nghĩa, khí phách và tinh thần võ tướng.",
     ],
-    regionalContext: "Miền Bắc lưu giữ nhiều kiến trúc tôn giáo cổ, nơi hoa sen thường xuất hiện như biểu tượng của sự thanh tịnh.",
-    connection: "Nhân vật Tiểu Tịnh cầm hoa sen trắng được thiết kế như người kể chuyện nhỏ, mời bạn ghé thăm ngôi chùa.",
-    productIds: ["p1", "p2"],
+    regionalContext: "Hát bội từng phát triển mạnh ở nhiều vùng miền, đặc biệt là miền Trung và miền Nam. Nghệ thuật này gắn liền với đời sống văn hóa cộng đồng, các dịp lễ hội đình làng và không gian biểu diễn truyền thống.",
+    connection: ["Nhân vật Tướng Quân được lấy cảm hứng từ hình tượng võ tướng trên sân khấu hát bội, tái hiện qua chiếc mão cầu kỳ, gương mặt hóa trang sắc nét và bộ giáp vàng đỏ nổi bật.",
+    "Không chỉ là một món đồ chơi sưu tầm, nhân vật còn mang theo câu chuyện về nghệ thuật sân khấu truyền thống, đưa nét đẹp hát bội đến gần hơn với thế hệ trẻ thông qua trải nghiệm sưu tầm và công nghệ NFC.",
+    ],
+    productIds: ["p1"],
   },
   {
     slug: "canh-buom-tren-vinh", title: "Cánh buồm trên vịnh", region: "bac", image: halong,
