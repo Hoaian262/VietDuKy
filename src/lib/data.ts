@@ -225,8 +225,8 @@ export const stories: Story[] = [
 
 // Demonstration collectible IDs that can be "verified" in the NFC simulation.
 export const digitalCollectibles: DigitalCollectible[] = [
-  { id: "VDK-BAC-0001", productId: "p1", serial: "#0001/1000" },
-  { id: "VDK-BAC-0002", productId: "p2", serial: "#0042/500" },
+  { id: "VDK-HATBOI-0001", productId: "p1", serial: "#0001/1000" },
+  { id: "VDK-BAC-0001", productId: "p2", serial: "#0042/500" },
   { id: "VDK-TRU-0001", productId: "p3", serial: "#0107/1000" },
   { id: "VDK-TRU-0002", productId: "p4", serial: "#0019/500" },
   { id: "VDK-NAM-0001", productId: "p5", serial: "#0233/1000" },
@@ -235,7 +235,7 @@ export const digitalCollectibles: DigitalCollectible[] = [
 
 // Sample collector initially owns two collectibles.
 export const sampleUnlocked: Record<string, string> = {
-  "VDK-BAC-0001": "2026-09-12",
+  "VDK-HATBOI-0001": "2026-09-12",
   "VDK-NAM-0001": "2026-10-03",
 };
 

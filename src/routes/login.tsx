@@ -36,7 +36,6 @@ export function AuthForm({ mode }: { mode: "login" | "register" }) {
   return (
     <div className="container-page max-w-md py-16">
       <h1 className="text-4xl">{mode === "login" ? "Đăng nhập" : "Tạo tài khoản"}</h1>
-      <div className="mt-4"><DemoNote>Đăng nhập demo: chỉ lưu tên và email trên trình duyệt, không lưu mật khẩu, không có tài khoản thật trên máy chủ.</DemoNote></div>
       <form onSubmit={submit} noValidate className="mt-6 space-y-4">
         {mode === "register" && input("name", "Họ và tên")}
         {input("email", "Email", "email")}
