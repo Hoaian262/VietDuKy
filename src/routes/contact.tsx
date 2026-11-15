@@ -46,7 +46,7 @@ function Contact() {
               <Button type="submit" variant="hero" size="lg">Gửi tin nhắn</Button>
             </form>
           )}
-          <div className="mt-6"><DemoNote>Thông tin liên hệ mẫu: hotro@vietduky.example · Giờ hỗ trợ 9:00–18:00 (thông tin minh họa, không phải liên hệ thật).</DemoNote></div>
+          <div className="mt-6"><DemoNote>Thông tin liên hệ: hotro@vietduky.example · Giờ hỗ trợ 9:00–18:00.</DemoNote></div>
         </div>
         <div>
           <h2 className="text-3xl">Câu hỏi thường gặp</h2>

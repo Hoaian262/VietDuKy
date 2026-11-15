@@ -87,7 +87,6 @@ useEffect(() => {
       <PageTitle eyebrow="Thanh toán demo" title="Hoàn tất đơn hàng" />
       <div className="container-page grid gap-8 lg:grid-cols-[1fr_380px]">
         <div className="space-y-6">
-          <DemoNote>Đây là thanh toán mô phỏng. Không có giao dịch thật nào được thực hiện và hệ thống không thu thập thông tin thẻ hay tài khoản ngân hàng.</DemoNote>
           <ol className="flex gap-3 text-sm">
             {["Thông tin giao hàng", "Thanh toán & xác nhận"].map((t, i) => (
               <li key={t} className={`flex items-center gap-2 ${step === i + 1 ? "font-semibold text-primary" : "text-muted-foreground"}`}>
