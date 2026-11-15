@@ -78,7 +78,7 @@ export const products: Product[] = [
     price: 450000, stock: 14, image: hatboi, gallery: [hatboi, tet],
     description: "Khám phá những phiên bản blind box giới hạn với tạo hình độc quyền, mang đậm dấu ấn văn hóa Việt và giá trị sưu tầm dành cho những ai yêu thích sự khác biệt.",
     specs: { "Chất liệu": "Vinyl & nhựa resin", "Kích thước": "12 × 10 × 14 cm", "Phiên bản": "Tiêu chuẩn", "NFC": "Có thẻ NFC gắn đế" },
-    variants: ["Tiêu chuẩn"], nfc: true, featured: true, createdAt: "2026-09-01", storySlug: "van-hoa-viet-hat-boi",
+    variants: ["Tiêu chuẩn"], nfc: true, featured: true, createdAt: "2026-09-01", storySlug: "doa-sen-giua-thang-long",
   },
   {
     id: "p2", slug: "BST-Mien-Bac", name: "BST - Thăng Long ký ức", collectionId: "thang-long", region: "bac",
@@ -169,16 +169,14 @@ export const products: Product[] = [
 
 export const stories: Story[] = [
   {
-    slug: "van-hoa-viet-hat-boi", title: "Hồn võ tướng", region: "trung", image:art1,
-    intro: "Ngôi chùa nhỏ dựng trên một cột đá, gợi hình bông sen vươn lên từ mặt hồ.",
+    slug: "doa-sen-giua-thang-long", title: "Hồn võ tướng", region: "trung", image:art1,
+    intro: "Nhân vật Tướng Quân được lấy cảm hứng từ hình tượng võ tướng trên sân khấu hát bội, tái hiện qua chiếc mão cầu kỳ, gương mặt hóa trang sắc nét và bộ giáp vàng đỏ nổi bật.",
     background: [
       "Hát bội (còn gọi là tuồng) là loại hình nghệ thuật sân khấu truyền thống lâu đời của Việt Nam, nổi bật với lối diễn ước lệ, động tác hình thể cách điệu và nghệ thuật hóa trang đặc trưng.",
     "Trong đó, hình tượng tướng quân thường xuất hiện với bộ giáp lộng lẫy, cờ mão uy nghi và gương mặt được vẽ theo những quy ước riêng, thể hiện tính cách, khí chất của nhân vật. Mỗi màu sắc và đường nét trên khuôn mặt đều góp phần kể nên câu chuyện về lòng trung nghĩa, khí phách và tinh thần võ tướng.",
     ],
     regionalContext: "Hát bội từng phát triển mạnh ở nhiều vùng miền, đặc biệt là miền Trung và miền Nam. Nghệ thuật này gắn liền với đời sống văn hóa cộng đồng, các dịp lễ hội đình làng và không gian biểu diễn truyền thống.",
-    connection: ["Nhân vật Tướng Quân được lấy cảm hứng từ hình tượng võ tướng trên sân khấu hát bội, tái hiện qua chiếc mão cầu kỳ, gương mặt hóa trang sắc nét và bộ giáp vàng đỏ nổi bật.",
-    "Không chỉ là một món đồ chơi sưu tầm, nhân vật còn mang theo câu chuyện về nghệ thuật sân khấu truyền thống, đưa nét đẹp hát bội đến gần hơn với thế hệ trẻ thông qua trải nghiệm sưu tầm và công nghệ NFC.",
-    ],
+    connection: "Nhân vật Tướng Quân được lấy cảm hứng từ hình tượng võ tướng trên sân khấu hát bội, tái hiện qua chiếc mão cầu kỳ, gương mặt hóa trang sắc nét và bộ giáp vàng đỏ nổi bật. Không chỉ là một món đồ chơi sưu tầm, nhân vật còn mang theo câu chuyện về nghệ thuật sân khấu truyền thống, đưa nét đẹp hát bội đến gần hơn với thế hệ trẻ thông qua trải nghiệm sưu tầm và công nghệ NFC.",
     productIds: ["p1"],
   },
   {
